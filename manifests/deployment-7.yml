@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "askdemoeitan-524f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "askdemoeitan-524f"
+  template:
+    metadata:
+      labels:
+        app: "askdemoeitan-524f"
+    spec:
+      containers:
+        - name: "askdemoeitan-524f"
+          image: "acrdemoeitan1111.azurecr.io/askdemoeitan"
+          ports:
+          - containerPort: 80
